@@ -6,6 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './shareds/header/header.component';
 import { FooterComponent } from './shareds/footer/footer.component';
+import { ListComponent ,closeDialog} from './components/list/list.component'; 
+import { HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button'; 
+
 
 
 @NgModule({
@@ -14,11 +23,20 @@ import { FooterComponent } from './shareds/footer/footer.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    ListComponent,
+    closeDialog
+    
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
+    HttpClientModule,
+    MatCardModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

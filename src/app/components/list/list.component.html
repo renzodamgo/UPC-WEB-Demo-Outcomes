@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>{{outcomesSum}}</h1>
+    <h2>Monto total de todos los outcomes registrados</h2>
+    <div class="row">
+        <div class="col-md-4 col-sm-12" *ngFor="let outcome of outcomes">
+            <mat-card class="pad-bottom">
+                <button type="button" class="btn-close" aria-label="Close"(click)="deleteOutcome(outcome.outcomeId)"></button>
+                <mat-card-title>{{outcome.amount}}</mat-card-title>
+                <mat-card-subtitle>{{outcome.detail}}</mat-card-subtitle>
+
+
+                <mat-card-content>
+                    <p>
+                        {{outcome.updatedAt}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+
+
+
+
+        </div>
+    </div>
+</div>

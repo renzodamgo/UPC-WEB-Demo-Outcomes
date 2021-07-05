@@ -1,0 +1,24 @@
+<div class="container pad-top">
+    <mat-card>
+        <mat-card-title>Registrar nuevo gasto</mat-card-title>
+        <mat-card-subtitle>Aquí podras registrar nuevo gasto</mat-card-subtitle>
+        <form >
+            <div class="form-group">
+              <label for="amount">Monto</label>
+              <input type="number" class="form-control" name="amount" [(ngModel)]="outcome.amount">
+              
+            </div>
+            <div class="form-group">
+                <label for="detail">Detalle</label>
+                <input type="name" class="form-control" name="detail" [(ngModel)]="outcome.detail">
+                
+              </div>
+            <div class="pad-top">
+                <button mat-raised-button color="accent" type="submit" (click)="editOutcome()">Agregar</button>
+                <button mat-raised-button [routerLink]="['/outcomes']" >Cancelar</button>
+            
+            </div>
+            
+          </form>
+    </mat-card>
+</div>

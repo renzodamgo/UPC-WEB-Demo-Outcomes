@@ -8,12 +8,15 @@ import { HeaderComponent } from './shareds/header/header.component';
 import { FooterComponent } from './shareds/footer/footer.component';
 import { ListComponent ,closeDialog} from './components/list/list.component'; 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button'; 
+import {MatButtonModule} from '@angular/material/button';
+import { CreateOutcomeComponent } from './components/create-outcome/create-outcome.component';
+import { EditOutcomeComponent } from './components/edit-outcome/edit-outcome.component'; 
 
 
 
@@ -24,7 +27,9 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     FooterComponent,
     ListComponent,
-    closeDialog
+    closeDialog,
+    CreateOutcomeComponent,
+    EditOutcomeComponent
     
 
   ],
@@ -36,7 +41,9 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientModule,
     MatCardModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

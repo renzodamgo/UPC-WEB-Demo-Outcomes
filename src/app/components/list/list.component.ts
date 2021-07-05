@@ -25,7 +25,18 @@ export class ListComponent implements OnInit {
       this.outcomes = res;
       console.log(this.outcomes)
       this.sumAllOutcomes()
+      this.replaceWithDates()
     });
+  }
+
+  replaceWithDates(){
+    this.outcomes.forEach(outcome => {
+      outcome.updatedAt = new Date(outcome.updatedAt);
+      outcome.createdAt = new Date(outcome.createdAt)
+    });
+   
+    console.log(this.outcomes[1].updatedAt.toLocaleString('en-US'));
+
   }
   deleteOutcome(outcomeId:number){
     const dialogRef = this.dialog.open(closeDialog);
@@ -38,6 +49,7 @@ export class ListComponent implements OnInit {
         this.outcomeService.deleteOutcomeById(outcomeId).subscribe((res)=> console.log(res))
         this.outcomes = this.outcomes.filter(outcome => outcome.outcomeId != outcomeId)
       }
+      this.sumAllOutcomes()
     });
 
 

@@ -1,0 +1,24 @@
+<div class="container pad-top">
+    <mat-card>
+        <mat-card-title>Registrar nuevo gasto</mat-card-title>
+        <mat-card-subtitle>Aquí podras registrar nuevo gasto</mat-card-subtitle>
+        <form [formGroup]= "createForm">
+            <div class="form-group">
+              <label for="ammount">Monto</label>
+              <input type="number" class="form-control" placeholder="Ingresa Monto" formControlName= "amount" >
+              
+            </div>
+            <div class="form-group">
+                <label for="detail">Detalle</label>
+                <input type="name" class="form-control" placeholder="Ingresa el nombre del detalle" formControlName= "detail"  >
+                
+              </div>
+            <div class="pad-top">
+                <button mat-raised-button [disabled]= "!createForm.valid" color="accent" type="submit" (click)="createOutcome()">Agregar</button>
+                <button mat-raised-button [routerLink]="['/outcomes']" >Cancelar</button>
+            
+            </div>
+            
+          </form>
+    </mat-card>
+</div>

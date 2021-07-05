@@ -1,6 +1,9 @@
 .btn-close{
     float: right;
 }
+.btn-add{
+    float: right;
+}
 .pad-bottom{
     /* padding-bottom: 3em; */
     margin-bottom: 3em;
